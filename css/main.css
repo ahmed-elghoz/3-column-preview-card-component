@@ -1,0 +1,215 @@
+/* Variables Start */
+:root {
+  --sedans-background: hsl(31, 77%, 52%);
+  --suvs-background: hsl(184, 100%, 22%);
+  --luxury-background: hsl(179, 100%, 13%);
+  --p-color: hsla(0, 0%, 100%, 0.75);
+  --main-color: hsl(0, 0%, 95%);
+}
+/* Variables End */
+
+/* General Start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--main-color);
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* General End */
+
+/* Card Start */
+.card {
+  display: flex;
+  justify-content: center;
+  max-width: 1140px;
+}
+.block {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  flex-basis: calc(85% / 3);
+  position: relative;
+}
+.sedans {
+  background-color: var(--sedans-background);
+  border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+}
+.suvs {
+  background-color: var(--suvs-background);
+}
+.luxury {
+  background-color: var(--luxury-background);
+  border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+}
+.block img {
+  width: 70px;
+}
+.block .text {
+  margin-bottom: 135px;
+}
+.block h1 {
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  letter-spacing: 0.6px;
+  font-size: 42px;
+  font-weight: 700;
+}
+.block p {
+  color: var(--p-color);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 94%;
+}
+.block button {
+  background-color: var(--main-color);
+  width: fit-content;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  position: absolute;
+}
+.sedans button {
+  color: var(--sedans-background);
+  bottom: 50px;
+}
+.suvs button {
+  color: var(--suvs-background);
+  bottom: 50px;
+}
+.luxury button {
+  color: var(--luxury-background);
+  bottom: 50px;
+}
+.block button:active {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+}
+/* Card End */
+
+/* Media Start */
+@media screen and (max-width: 900px) {
+  .container {
+    height: 100%;
+  }
+  .card {
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .block .text {
+    margin-bottom: 70px;
+  }
+  .sedans {
+    border-radius: 10px 0 0 0;
+    -webkit-border-radius: 10px 0 0 0;
+    -moz-border-radius: 10px 0 0 0;
+    -ms-border-radius: 10px 0 0 0;
+    -o-border-radius: 10px 0 0 0;
+  }
+  .suvs {
+    border-radius: 0 10px 0 0;
+    -webkit-border-radius: 0 10px 0 0;
+    -moz-border-radius: 0 10px 0 0;
+    -ms-border-radius: 0 10px 0 0;
+    -o-border-radius: 0 10px 0 0;
+  }
+  .sedans,
+  .suvs {
+    flex-basis: calc(85% / 2);
+  }
+  .luxury {
+    flex-basis: 100%;
+    max-width: 85%;
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+  }
+  .sedans button,
+  .suvs button,
+  .luxury button {
+    bottom: 35px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .block {
+    flex-basis: 100%;
+    max-width: 88%;
+    padding: 45px;
+  }
+  .sedans {
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+  }
+  .suvs {
+    border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0;
+    -ms-border-radius: 0 0 0 0;
+    -o-border-radius: 0 0 0 0;
+  }
+  .luxury {
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+  }
+  .block .text {
+    margin-bottom: 50px;
+  }
+  .block .text p {
+    font-size: 13px;
+    max-width: 85%;
+  }
+  .sedans button,
+  .suvs button,
+  .luxury button {
+    bottom: 35px;
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  .block button:active {
+    border-width: 2px;
+  }
+}
+/* Media End */
+
+/* Footer Start */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Footer End */
